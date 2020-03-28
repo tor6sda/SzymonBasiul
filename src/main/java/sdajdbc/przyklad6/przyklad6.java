@@ -16,10 +16,10 @@ public class przyklad6 {
         try(PreparedStatement preStatement = DatabaseConnection.getInstance().getConnection().prepareStatement(sqlSelect)) {
             ResultSet resultSet = preStatement.executeQuery();
             while (resultSet.next()) {
-                Adress address = new Adress();
+                Adress adress = new Adress();
                 adress.setAdressId(resultSet.getInt("ADD_ID"));
                 adress.setAdressStreet(resultSet.getString("ADD_STREET"));
-                adress.setAdressApartmentNo(resultSet.getString("ADD_APARTAMENT_NO"));
+                adress.setAdressApartmentNo(resultSet.getString("ADD_APARTMENT_NO"));
                 adress.setAdressBuildingNo(resultSet.getString("ADD_BUILDING_NO"));
                 adress.setAdressCity(resultSet.getString("ADD_CITY"));
                 adress.setAdressPostalCode(resultSet.getString("ADD_POSTAL_CODE"));
